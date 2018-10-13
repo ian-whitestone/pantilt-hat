@@ -67,7 +67,7 @@ class PanTilt:
 
         if self._i2c is None:
             try:
-                from smbus import SMBus
+                from smbus2 import SMBus
                 self._i2c = SMBus(1)
             except ImportError:
                 if version_info[0] < 3:
